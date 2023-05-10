@@ -44,12 +44,9 @@
 
 // console.log(eventOddChecker(1.5));
 
-
-
 //  (3) count the Number of vowels in str
 
-
-// with built in functionality 
+// with built in functionality
 
 // let str = "arslan";
 
@@ -68,7 +65,6 @@
 
 // console.log(vowelsCount("arslan"));
 
-
 // with nested loops
 
 // let vowelCountLoop = (str) => {
@@ -86,4 +82,73 @@
 //   return count;
 // };
 
-// console.log(vowelCountLoop("arslan"))
+// console.log(vowelCountLoop("arslan"));
+
+// (4) the first letter must be capital letter of str
+
+// function frontDoorPassword(word) {
+//   let lowercase = word.toLowerCase().slice(1);
+//   let uppercase = word.charAt(0).toUpperCase();
+//   let result = uppercase + lowercase;
+//   return result;
+// }
+// console.log(frontDoorPassword("ARSLAN"));
+
+// let str = "arslan";
+
+// let finalFinal = str.toLowerCase().charAt(0).toUpperCase() + str.toLowerCase().slice(1);
+
+// console.log(finalFinal);
+
+// (5)  remove the last letter in sentence
+
+// let str = "you satnd high   ";
+// let trimmed = str.trim();
+
+// let sep = trimmed.split("");
+
+// let lastLetter = sep[sep.length - 1];
+
+// console.log(lastLetter);
+
+// (6) problem
+//  input backDoorPassword('horse');
+// => output "Horse, please"
+
+// function backDoorPassword(word) {
+//   let captlize = word.charAt(0).toUpperCase();
+//   let remining = word.slice(1);
+//   let combine = captlize + remining;
+
+//   let result = combine + "," + " please";
+
+//   return result;
+// }
+
+// console.log(backDoorPassword("horse"));
+
+// (7) input: [1,[2,3,null,4],[null],5]
+
+// output: [1,2,3,4,5]
+
+
+let arr = [1, [2, 3, null, 4], [null], 5];
+
+const flatten = (arr) => {
+  let flatArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      for (let j = 0; j < arr[i].length; j++) {
+        if (arr[i][j] !== null) flatArr.push(arr[i][j]);
+      }
+    } else {
+      if (arr[i] !== null) {
+        flatArr.push(arr[i]);
+      }
+    }
+  }
+
+  return flatArr;
+};
+
+console.log(flatten(arr))
