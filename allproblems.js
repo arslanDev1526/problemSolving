@@ -131,24 +131,89 @@
 
 // output: [1,2,3,4,5]
 
+// let arr = [1, [2, 3, null, 4], [null], 5];
 
-let arr = [1, [2, 3, null, 4], [null], 5];
+// const flatten = (arr) => {
+//   let flatArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       for (let j = 0; j < arr[i].length; j++) {
+//         if (arr[i][j] !== null) flatArr.push(arr[i][j]);
+//       }
+//     } else {
+//       if (arr[i] !== null) {
+//         flatArr.push(arr[i]);
+//       }
+//     }
+//   }
 
-const flatten = (arr) => {
-  let flatArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])) {
-      for (let j = 0; j < arr[i].length; j++) {
-        if (arr[i][j] !== null) flatArr.push(arr[i][j]);
-      }
-    } else {
-      if (arr[i] !== null) {
-        flatArr.push(arr[i]);
-      }
-    }
-  }
+//   return flatArr;
+// };
 
-  return flatArr;
-};
+// console.log(flatten(arr))
 
-console.log(flatten(arr))
+// (8) sort the Array
+
+// ascending (increasing) order
+
+// let arr = [1,3,5,7,9,7,5,4,3,2,4,6,7]
+
+// let result = arr.sort((a,b)=>a-b);
+// console.log(result);
+
+// descending (decreasing)
+
+// arr.sort((a,b)=>b-a); that will be changed
+
+// (9) find the longest word in string
+
+// let str = "cjdhsdkfhf kusudyfuyse kueuifeg gu awuyqwaiuawg"
+// let longestString = (str) => {
+//   let words = str.split(" ");
+//   let maxLength = 0;
+//   let longestWord = "";
+
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length > maxLength) {
+//       maxLength = words[i].length;
+//       longestWord = words[i];
+//     }
+//   }
+//   console.log(maxLength);
+//   console.log(longestWord);
+// };
+
+// longestString(str);
+
+// (10) return the unique value
+
+// let arr = [1, 2, 3, 4, 3, 9, 8, 9];
+
+// let uniqueValue = (arr) => {
+//   let newArr = [];
+//   arr.sort();
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] !== arr[i + 1]) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// };
+
+// console.log(uniqueValue(arr));
+
+// without sorting
+
+// let arr = [1, 2, 3, 4, 3, 9, 8, 9];
+
+// let uniqueValues = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   let currentValue = arr[i];
+//   if (!uniqueValues.includes(currentValue)) {
+//     uniqueValues.push(currentValue);
+//   }
+// }
+
+// console.log(uniqueValues);
