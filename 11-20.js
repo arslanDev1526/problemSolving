@@ -27,7 +27,7 @@
 //   count[element] = (count[element] || 0) + 1;
 // });
 
-//  👇️ {one: 3, two: 2, three: 1}
+//   {one: 3, two: 2, three: 1}
 // console.log(count);
 
 // (12) fint the sum of array
@@ -67,5 +67,38 @@
 // .then(result => console.log(result))
 // .catch(err => console.error(err));
 
+
+// (13) find the multiple upto a limit
+
+const findMultipile = (num,limit) => { 
+    let multipipe = [];
+    for(let i = 1; i < limit; i++) {
+        if(i % num === 0){ 
+            multipipe.push(i);
+        }
+}
+return multipipe;
+
+}
+
+console.log(findMultipile(2,100))
+
+
+
+// (14) remove the duplicate from the array
+
+let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5]
+
+let removeDuplicate = (arr) => { 
+let uniququeItems = [];
+for(let i = 0; i < arr.length; i++){ 
+    if(uniququeItems.indexOf(arr[i]) === -1) { 
+        uniququeItems.push(arr[i]); 
+    }
+}
+return uniququeItems
+}
+
+console.log(removeDuplicate(arr))
 
 
