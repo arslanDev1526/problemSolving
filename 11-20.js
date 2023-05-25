@@ -70,35 +70,50 @@
 
 // (13) find the multiple upto a limit
 
-const findMultipile = (num,limit) => { 
-    let multipipe = [];
-    for(let i = 1; i < limit; i++) {
-        if(i % num === 0){ 
-            multipipe.push(i);
-        }
-}
-return multipipe;
-
-}
-
-console.log(findMultipile(2,100))
-
-
+// const findMultipile = (num,limit) => { 
+//     let multipipe = [];
+//     for(let i = 1; i < limit; i++) {
+//         if(i % num === 0){ 
+//             multipipe.push(i);
+//         }
+// }
+// return multipipe;
+// }
+// console.log(findMultipile(2,100))
 
 // (14) remove the duplicate from the array
 
-let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5]
+// let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5]
+// let removeDuplicate = (arr) => { 
+// let uniququeItems = [];
+// for(let i = 0; i < arr.length; i++){ 
+//     if(uniququeItems.indexOf(arr[i]) === -1) { 
+//         uniququeItems.push(arr[i]); 
+//     }
+// }
+// return uniququeItems
+// }
+// console.log(removeDuplicate(arr))
 
-let removeDuplicate = (arr) => { 
-let uniququeItems = [];
-for(let i = 0; i < arr.length; i++){ 
-    if(uniququeItems.indexOf(arr[i]) === -1) { 
-        uniququeItems.push(arr[i]); 
+
+// from set
+
+// let array = [1,2,3,4,5,5,4,3,2,9,0]
+// let removedArr = new Set(array);
+// // console.log(removedArr);
+// let convertToArr = Array.from(removedArr);
+// console.log(convertToArr);
+
+// (15)  shuffle the array
+
+const shuffleArray = (array) => { 
+    for(let i = array.length - 1; i >= 0; i--){ 
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [array[i], array[randomIndex]] = [array[randomIndex], array[i]]
     }
-}
-return uniququeItems
+    return array
 }
 
-console.log(removeDuplicate(arr))
+console.log(shuffleArray([1,1,2,2,3,3,4,4,5,5]),"here")
 
 
